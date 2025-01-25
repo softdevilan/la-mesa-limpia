@@ -4,7 +4,7 @@
     <section class="products-grid">
         
         <article *ngFor="let plato of platos">
-            <a class="plato-container" [routerLink]="['../arroz', plato.id]">
+            <a class="plato-container" [routerLink]="['../arroz', plato.id]" [fragment]="plato.foto">
                 <div class="img-container">
                     <img src="platos/{{plato.foto}}.jpg" alt="{{ plato.nombre }}">
                 </div>
