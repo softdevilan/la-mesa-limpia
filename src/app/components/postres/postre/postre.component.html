@@ -1,0 +1,29 @@
+<div id="postre" class="producto">
+    <div class="producto-container">
+
+        <div class="img-container">
+            <img src="platos/{{plato.foto}}.jpg" alt="{{ plato.nombre }}">
+        </div>
+    
+        <div class="info-container">
+    
+            <h1 class="nombre">{{ plato.nombre }}</h1>
+            <a [routerLink]="['../../postres']" class="volver-categoria">POSTRES</a>
+    
+            <div class="alergenos">
+                <div class="alergeno-container" *ngFor="let alergeno of plato.alergenos">
+                    <img src="alergenos/{{alergeno}}.png" >
+                </div>
+            </div>
+    
+            <div class="descripcion-container">
+                <h2 class="descripcion-titulo">Descripción: </h2>
+                <p class="descripcion">{{ plato.descripcion }}</p>
+            </div>       
+    
+            <p class="precio">{{ plato.precio }}€</p>
+    
+        </div>
+    
+    </div>
+</div>

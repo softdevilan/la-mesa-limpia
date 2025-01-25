@@ -1,0 +1,25 @@
+<div id="postres" class="productos">
+    <h1>🍰 Postres</h1>
+
+    <section class="products-grid">
+        
+        <article *ngFor="let plato of platos">
+            <a class="plato-container" [routerLink]="['../postre', plato.id]">
+                <div class="img-container">
+                    <img src="platos/{{plato.foto}}.jpg" alt="{{ plato.nombre }}">
+                </div>
+
+                <div class="info-container">
+                    <h2 class="nombre">{{ plato.nombre }}</h2>
+                    <div class="alergenos">
+                        <div class="alergeno-container" *ngFor="let alergeno of plato.alergenos">
+                            <img src="alergenos/{{alergeno}}.png" >
+                        </div>
+                    </div>
+                    <p class="precio">{{ plato.precio }}€</p>
+                </div>
+            </a>
+        </article>
+
+    </section>
+</div>

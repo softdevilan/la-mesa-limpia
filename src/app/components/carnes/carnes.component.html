@@ -1,0 +1,25 @@
+<div id="carnes" class="productos">
+    <h1>🥩 Carnes</h1>
+
+    <section class="products-grid">
+        
+        <article *ngFor="let plato of platos">
+            <a class="plato-container" [routerLink]="['../carne', plato.id]">
+                <div class="img-container">
+                    <img src="platos/{{plato.foto}}.jpg" alt="{{ plato.nombre }}">
+                </div>
+
+                <div class="info-container">
+                    <h2 class="nombre">{{ plato.nombre }}</h2>
+                    <div class="alergenos">
+                        <div class="alergeno-container">
+                            <img src="animales/{{ plato.carne }}.png" >
+                        </div>
+                    </div>
+                    <p class="precio">{{ plato.precio }}€</p>
+                </div>
+            </a>
+        </article>
+
+    </section>
+</div>
